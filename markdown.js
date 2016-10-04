@@ -1,3 +1,11 @@
+// Package markdown.js creates a README.md from a markdown.html file, converting html to md
+// Instructions
+// Just create a markdown.html file and fill with html
+//
+// then run
+// ```$ node markdown.js```
+// to convert to README.md file
+// from the same directory.
 'use strict';
 var html2markdown = require('html2markdown');
 var fs = require('fs');

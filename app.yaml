@@ -1,0 +1,52 @@
+application: yeoman-angular-seed
+version: v1
+runtime: go
+api_version: go1
+
+handlers:
+  - url: /$
+    mime_type: text/html
+    static_files: dist/index.html
+    upload: dist/index.html
+
+  - url: /bower_components
+    static_dir: /bower_components
+
+  - url: /scripts
+    static_dir: dist/scripts
+
+  - url: /scripts/(.*\.js)$
+    static_files: /scripts/(.*\.js)$
+    upload: /scripts/(.*\.js)$
+
+  - url: /styles
+    static_dir: dist/styles
+
+  # - url: /scripts/(.*\.js)
+  #   mime_type: text/javascript
+  #   static_files: /dist/scripts/\1
+  #   upload: /dist/scripts/\1
+
+skip_files:
+  - ^(.*/)?app\.yaml
+  - ^(.*/)?app\.yml
+  - ^(.*/)?#.*#
+  - ^(.*/)?.*~
+  - ^(.*/)?.*\.py[co]
+  - ^(.*/)?.*/RCS/.*
+  - ^(.*/)?\..*
+  - ^(.*/)?tests$
+  - ^(.*/)?test$
+  - ^test/(.*/)?
+  - ^COPYING.LESSER
+  - ^README\..*
+  - \.gitignore
+  - ^\.git/.*
+  - \.*\.lint$
+  - ^fabfile\.py
+  - ^testrunner\.py
+  - ^grunt\.js
+  - ^node_modules/(.*/)?
+  - (.*).sass
+  - (.*).ts
+
