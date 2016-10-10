@@ -28,6 +28,9 @@ handlers:
   - url: /styles
     static_dir: dist/styles
 
+  - url: /images
+    static_dir: dist/images
+
   - url: /$
     mime_type: text/html
     static_files: dist/index.html
