@@ -13,6 +13,7 @@ session.vim
 *~
 /node_modules
 /dist
+/test
 /.tmp
 /.sass-cache
 /bower_components
